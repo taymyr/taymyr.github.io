@@ -1,0 +1,29 @@
+site:
+  title: Taymyr
+  # the 404 page and sitemap files only get generated when the url property is set
+  url: https://taymyr.io/ru
+  start_page: ROOT::index.adoc
+
+content:
+  sources:
+    - url: ./
+      branches: HEAD
+      start_paths: ru
+
+ui:
+  bundle:
+    url: https://github.com/taymyr/taymyr-antora-ui/releases/latest/download/ui-bundle.zip
+    snapshot: true
+  default_layout: docs
+
+asciidoc:
+  attributes:
+    page-lang: 'ru'
+
+output:
+  clean: true
+  dir: build/site/ru
+
+antora:
+  extensions:
+    - require: '@antora/lunr-extension'
