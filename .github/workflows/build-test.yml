@@ -51,5 +51,5 @@ jobs:
   finish:
     name: Finish
     needs: # Should be last
-      - "check"
+      - "docs"
     uses: taymyr/.github/.github/workflows/rtm.yml@v1
